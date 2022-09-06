@@ -10,8 +10,11 @@ public class Hotel {
         System.out.println("Pilihan cottage\n1. Duku\n2. Jeruk\n3. Alpukat\n3. Jambur Air\n4. Durian\n5. Melon\n6. Belimbing\n7. Mangga\n8. Kedondong\n9. Barrack");
         System.out.print("Pilih cottage: ");
         int kamar = input.nextInt();
-        System.out.print(kamar == 9 ? "Masukkan jumlah orang: " : "Masukkan jumlah cottage: ");
-        int jumlah = input.nextInt();
+        int jumlah = 0;
+        if (kamar == 9) {
+            System.out.print("Masukkan jumlah orang:");
+            jumlah = input.nextInt();
+        }
         System.out.print("Hari (weekday/weekend/holiday): ");
         String day = input.next().toLowerCase();
 
@@ -24,7 +27,7 @@ public class Hotel {
             default -> 0;
         };
         if (harga == 0) System.out.println("Terjadi kesalahan!");
-        else System.out.printf("Total harga yang harus dibayarkan adalah: %s", harga*jumlah);
+        else System.out.printf("Total harga yang harus dibayarkan adalah: %s", kamar == 9 ? harga*jumlah : harga);
 
 
     }
