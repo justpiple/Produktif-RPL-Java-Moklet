@@ -5,9 +5,8 @@ public class Hotel {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        int hargaKamar;
         System.out.println("Bakti Alam Cottage\n============");
-        System.out.println("Pilihan cottage\n1. Duku\n2. Jeruk\n3. Alpukat\n3. Jambur Air\n4. Durian\n5. Melon\n6. Belimbing\n7. Mangga\n8. Kedondong\n9. Barrack");
+        System.out.println("Pilihan cottage\n1. Duku\n2. Jeruk\n3. Alpukat\n4. Jambu Air\n5. Durian\n6. Melon\n7. Belimbing\n8. Mangga\n9. Kedondong\n10. Barrack");
         System.out.print("Pilih cottage: ");
         int kamar = input.nextInt();
         int jumlah = 0;
